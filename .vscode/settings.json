@@ -1,0 +1,30 @@
+{
+    "python.pythonPath": "venv/bin/python",
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.wordWrap": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontSize": 13,
+    "files.autoSave": "off",
+    "liveServer.settings.donotVerifyTags": true,
+    "python.jediEnabled": false,
+    "python.languageServer": "Microsoft",
+    "python.showStartPage": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django",
+        "--errors-only",
+    ],
+    "files.associations": {
+        "**/templates/*.html": "django-html",
+        "**/templates/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements",
+        "*.html": "html"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+}

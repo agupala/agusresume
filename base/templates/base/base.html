@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - {% block title %}{% endblock title %}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'base/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Agustin Palau</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'base/assets/img/profile_1.jpg'  %}" alt="Image profile" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Agustin
+                        <span class="text-primary">Palau</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        (+549) 3487-691910 ·
+                        <a href="mailto:agu.pala@gmail.com">agu.pala@gmail.com</a> ·
+                        <a href="mailto:apalau@frd.utn.edu.ar">apalau@frd.utn.edu.ar</a> 
+                    </div>
+                    <p class="lead mb-5">I am a freelance programmer looking to assist companies or anyone who requires web solutions. I work in Python as the main programming language, and Django as a web framework.</p>
+                    
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/agustin-palau-40a79521/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/agupala" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/agughost/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Django Developer</h3>
+                            <div class="subheading mb-3">Niandu Dev</div>
+                            <p>
+                            I started web projects developed mainly in Django, also using HTML, CSS and Bootstrap. I also use Javascript to a lesser extent to support me in the programming of websites.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">May 2020 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Justice Administration</h3>
+                            <div class="subheading mb-3">Court of Law</div>
+                            <p>I work in labor court of the Justice of the province of Buenos Aires. My tasks are administrative in nature: dispatch of electronic documents, management and administration of legal cases, management of the Augusta corporate system.
+                            I am currently carrying out my activities through tele-work (home working).</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">December 2010 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Help Desk</h3>
+                            <div class="subheading mb-3">Grupo SI</div>
+                            <p>Technical support to end users (Level 1) in the automotive company Toyota Argentina S.A. My tasks consisted of telephone attention to users, PC repair, installation of operating systems, installation of corporate software.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2007 - July 2010</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Technical Support</h3>
+                            <div class="subheading mb-3">AG Solutions SRL</div>
+                            <p>Technical support to company clients, on-site attention of equipment in companies, PC repair and installation operating systems.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2006 - December 2006</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Universidad Tecnologica Nacional</h3>
+                            <div class="subheading mb-3">Facultad Regional Delta</div>
+                            <div>Information Systems Engineer (Bachelors Degree)</div>
+                            <p>Title pending</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Universidad Tecnologica Nacional</h3>
+                            <div class="subheading mb-3">Facultad Regional Delta</div>
+                            <div>University Systems Analyst</div>
+                            <p>Intermediate title</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Colegio Sagrada Familia</h3>
+                            {% comment %} <div class="subheading mb-3">Facultad Regional Delta</div> {% endcomment %}
+                            <div>Bachelor with an orientation in Social Sciences</div>
+                            <p>Highschool title</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Courses -->
+            <section class="resume-section" id="courses">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Courses</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Django</h3>
+                            <div class="subheading mb-3">Desarrollo de aplicaciones escalabes</div>
+                            <div>Centro de e-learning</div>
+                            <p>UTN FRBA</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Python</h3>
+                            <div class="subheading mb-3">Curso maestro de Python 3</div>
+                            <div>Udemy</div>
+                            <p>online course</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Cisco Certified Networking Assosiated</h3>
+                            <div class="subheading mb-3">CCNA Modules 1, 2, 3 & 4</div>
+                            <div>Fundacion Proydesa</div>
+                            <p>UTN FRD</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Django</h3>
+                            <div class="subheading mb-3">Build an API with Django Rest Framework</div>
+                            <div>Udemy</div>
+                            <p>online course (John Elder)</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Django</h3>
+                            <div class="subheading mb-3">Python Django dev to deployment</div>
+                            <div>Udemy</div>
+                            <p>online course (Brad Traversy)</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Bootstrap</h3>
+                            <div class="subheading mb-3">Bootstrap 4 from scratch with 5 projects</div>
+                            <div>Udemy</div>
+                            <p>online course (Brad Traversy)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Django
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            CRUD (ABM)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Database (Postresql)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            API
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            User & Authentication
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            
+            <!-- Projects Portfolio-->
+            {% block content %}{% endblock content %}
+            
+        </div>
+        <!-- Footer -->
+        <footer class="py-4 bg-dark text-white text-center" id="main-footer">
+            Copyright &copy; <span id="year"></span> Niandu Dev
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'base/js/scripts.js' %}"></script>
+        <script>
+            const date = new Date();
+            document.querySelector('#year').innerHTML = date.getFullYear();
+        </script>
+    </body>
+</html>
