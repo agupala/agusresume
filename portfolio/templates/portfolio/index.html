@@ -18,7 +18,7 @@
                                 <img class="card-img-top" src="{{ project.image_thumbnail.url }}" alt="Card image cap">
                                 <div class="card-body">
                                     <h5 class="card-title text-center">{{ project.title }}</h5>
-                                    <p>{{ project.description|truncatechars:80 }}</p>
+                                    <!-- <p>{{ project.description|truncatechars:80 }}</p> -->
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#project-{{project.id}}">View More Details</button>
                                 </div>
@@ -36,18 +36,30 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="lead modal-body">
-                                        {{ project.description }}                                    
-                                    </div>
-                                    <p class="lead modal-body">
-                                        {% if project.tecnologies.all %}
-                                            <b>Tecnologies:</b> {% for tecnology in project.tecnologies.all %}
-                                                {{ tecnology.title }} 
-                                                {% if not forloop.last %} - {% endif %}
-                                            {% endfor %}
-                                        
+                                    <div class="modal-body">
+                                        {{ project.description|safe }}                                    
+                                    
+                                        {% if project.technologies.all %}
+                                            <p>
+                                                <b>Tecnologies: </b> {% for technology in project.technologies.all %}
+                                                    {{ technology.title }} 
+                                                    {% if not forloop.last %} - {% endif %}
+                                                {% endfor %}
+                                            </p>
                                         {% endif %}
-                                    </p>
+                                    
+                                        {% if project.github_link %}
+                                            <p>
+                                                <b>Github Link: </b><a href="{{ project.github_link }}" target="_blank">{{ project.github_link }}</a> 
+                                            </p>
+                                        {% endif %}
+
+                                        
+                                        {% if project.web_link %}
+                                            <p><b>Web Link: </b><a href="{{ project.web_link }}">{{ project.web_link }}</a></p>
+                                        {% endif %}
+                                            
+                                    </div>    
                                     <hr>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
