@@ -26,7 +26,7 @@ SECRET_KEY = 'j6^kgs_pb4x@g7z$+qk!x*=bmom9+v-5pymsp57gkhcpro(vzw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['agusresume.herokuapp.com', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,21 +80,21 @@ WSGI_APPLICATION = 'resume.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-import dj_database_url
-from decouple import config
-
 DATABASES = {
-    'default':dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# import dj_database_url
+# from decouple import config
+
+# DATABASES = {
+#     'default':dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
 
 
 # Password validation

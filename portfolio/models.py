@@ -28,8 +28,8 @@ class Project(models.Model):
         format='JPEG',
         options={'quality': 60},
     )
-    web_link = models.URLField(verbose_name="Web Link", blank=True, default="", max_length=200)
-    github_link = models.URLField(verbose_name="Github Link", max_length=200)
+    web_link = models.URLField(verbose_name="Web Link", blank=True, default='',max_length=200)
+    github_link = models.URLField(verbose_name="Github Link", blank=True, default='', max_length=200)
     created = models.DateTimeField(verbose_name="Created", auto_now_add=True)
     updated = models.DateTimeField(verbose_name="Updated", auto_now=True)
 
