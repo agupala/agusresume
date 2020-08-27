@@ -14,6 +14,9 @@ from pathlib import Path
 
 import os
 
+import dj_database_url
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -21,12 +24,14 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'j6^kgs_pb4x@g7z$+qk!x*=bmom9+v-5pymsp57gkhcpro(vzw'
+# SECRET_KEY = 'j6^kgs_pb4x@g7z$+qk!x*=bmom9+v-5pymsp57gkhcpro(vzw'
+SECRET_KEY = config('SECRET_KEY', default='j6^kgs_pb4x@g7z$+qk!x*=bmom9+v-5pymsp57gkhcpro(vzw')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = False
+DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['agusresume.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
 
 # Application definition
@@ -79,9 +84,6 @@ WSGI_APPLICATION = 'resume.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-import dj_database_url
-from decouple import config
 
 DATABASES = {
     'default': {
@@ -160,3 +162,6 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+if config('DJANGO_PRODUCTION_ENV', default=False, cast=bool):
+    from .settings_production import *
