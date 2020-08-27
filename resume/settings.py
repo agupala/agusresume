@@ -28,8 +28,8 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = config('SECRET_KEY', default='j6^kgs_pb4x@g7z$+qk!x*=bmom9+v-5pymsp57gkhcpro(vzw')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
+DEBUG = True
+# DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = ['agusresume.herokuapp.com', '127.0.0.1', '0.0.0.0']
 
